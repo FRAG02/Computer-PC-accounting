@@ -1,22 +1,65 @@
 const navigation = [
     {
-        placeholder: "МОЛ", url: "/mol", component: "MOL"
+        placeholder: 'МОЛ',
+        url: '/mol',
+        component: 'MOL',
     },
     {
-        placeholder: "Подразделения", url: "/department", component: "Department"
+        placeholder: 'Подразделения',
+        url: '/department',
+        component: 'Department',
     },
     {
-        placeholder: "Оборудование", url: "/equipment", component: "Equipment"
+        placeholder: 'Оборудование',
+        url: '/equipment',
+        component: 'Equipment',
     },
     {
-        placeholder: "Добавить Подразделение", url: "/department/new", component: "DepartmentForm"
+        placeholder: 'Сервисные организации',
+        url: '/serviceserviceOrganization',
+        component: 'ServiceOrganization',
     },
     {
-        placeholder: "Добавить Оборудование", url: "/equipment/new", component: "EquipmentForm"
+        placeholder: 'Статус оборудования',
+        url: '/equipmentSatus',
+        component: 'EquipmentStatus',
+    },
+
+    {
+        placeholder: 'Добавить Оборудование',
+        url: '/equipment/new',
+        component: 'EquipmentForm',
     },
     {
-        placeholder: "Добавить МОЛ", url: "/mol/new", component: "MOLForm"
-    }
+        placeholder: 'Добавить Подразделение',
+        url: '/department/new',
+        component: 'DepartmentForm',
+        restricted: true,
+    },
+    {
+        placeholder: 'Добавить МОЛ',
+        url: '/mol/new',
+        component: 'MOLForm',
+        restricted: true,
+    },
+    {
+        placeholder: 'Добавить сервисную оранизацию',
+        url: '/serviceOrganization/new',
+        component: 'ServiceOrganizationForm',
+        restricted: true,
+    },
+    {
+        placeholder: 'Добавить статус оборудования',
+        url: '/equipmentStatusForm/new',
+        component: 'EquipmentStatusForm',
+        restricted: true,
+    },
+    {
+        placeholder: 'Добавить Пользователя',
+        url: '/user/new',
+        component: 'UserForm',
+        restricted: true,
+    },
 ]
 
 export default navigation

@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.bd4cedd8.css","mappings":"AAAA,UAGI,QAAS,CADT,SAEJ,CAEA,YAGI,qBACJ","sources":["styles/index.css"],"sourcesContent":["html,\r\nbody {\r\n    padding: 0;\r\n    margin: 0;\r\n}\r\n\r\nhtml,\r\nbody,\r\n* {\r\n    box-sizing: border-box;\r\n}"],"names":[],"sourceRoot":""}

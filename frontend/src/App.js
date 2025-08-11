@@ -1,33 +1,34 @@
-import React, { useState } from 'react';
-import Login from './pages/Login';
-import Main from './Router';
-import Register from './pages/Register';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
-import CssBaseline from '@mui/material/CssBaseline';
+import React, { useState } from 'react'
+import Login from './pages/Login'
+import Main from './Router'
+import Register from './pages/Register'
+import { ThemeProvider, createTheme } from '@mui/material/styles'
+import CssBaseline from '@mui/material/CssBaseline'
 
-import "./styles/index.css"
-import { useUser } from './context/userContext';
+import './styles/index.css'
+import { useUser } from './context/userContext'
 
-const darkTheme = createTheme({
+const lightTheme = createTheme({
     palette: {
-        mode: 'dark',
+        mode: 'light',
     },
-});
-
+})
 
 const App = () => {
-    const [showRegister, setShowRegister] = useState(false);
+    const [showRegister, setShowRegister] = useState(false)
     const { user, setUser } = useUser()
     return (
-        <ThemeProvider theme={darkTheme}>
+        <ThemeProvider theme={lightTheme}>
             <CssBaseline />
             <div>
                 {!user ? (
                     showRegister ? (
-                        <Register onSwitchToLogin={() => setShowRegister(false)} />
+                        <Register
+                            onSwitchToLogin={() => setShowRegister(false)}
+                        />
                     ) : (
                         <Login
-                            onLogin={() => setUser(true)}
+                            onLogin={setUser}
                             onSwitchToRegister={() => setShowRegister(true)}
                         />
                     )
@@ -39,4 +40,4 @@ const App = () => {
     )
 }
 
-export default App;
+export default App

@@ -60,7 +60,8 @@ class EquipmentController
                 'cost' => $data['стоимость'],
                 'serial_number' => $data['заводской_номер'],
                 'inventory_number' => $data['инвентарный_номер'],
-                'department_id' => $data['подразделение_id']
+                'department_id' => $data['подразделение_id'],
+                'office_number' => $data['номер_кабинета']
             ];
 
             // Проверяем, существует ли оборудование с указанным id
@@ -77,7 +78,8 @@ class EquipmentController
                     `стоимость` = :cost,
                     `заводской_номер` = :serial_number,
                     `инвентарный_номер` = :inventory_number,
-                    `подразделение_id` = :department_id
+                    `подразделение_id` = :department_id,
+                    `номер_кабинета` = :office_number
                 WHERE 
                     `id` = :id
             ";
@@ -98,7 +100,8 @@ class EquipmentController
                     `стоимость`,
                     `заводской_номер`,
                     `инвентарный_номер`,
-                    `подразделение_id`
+                    `подразделение_id`,
+                    `номер_кабинета`  
                 ) VALUES (
                     :name,
                     :production_date,
@@ -108,7 +111,8 @@ class EquipmentController
                     :cost,
                     :serial_number,
                     :inventory_number,
-                    :department_id
+                    :department_id,
+                    :office_number
                 )
             ";
                 $stmt = $this->pdo->prepare($sql);
